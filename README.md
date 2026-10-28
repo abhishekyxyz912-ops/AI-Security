@@ -29,3 +29,15 @@ prompt -> injection check -> PII redaction -> router -> SLM / LLM -> answer
 pip install -r requirements.txt
 pytest
 ```
+
+Full step-by-step: see [docs/V1.0-SETUP.md](docs/V1.0-SETUP.md).
+
+## Experiment tracking
+
+Every experiment is logged to MLflow through `src/tracking.py`:
+
+```
+mlflow ui     # then open http://127.0.0.1:5000
+```
+
+Runs are grouped as `ai-security/<experiment>` and tagged with `project_version`.
