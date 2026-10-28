@@ -23,7 +23,7 @@ def test_modules_import(module):
 def test_mlflow_logs_a_run(tmp_path, monkeypatch):
     """MLflow can create an experiment and log a param + metric."""
     mlflow = pytest.importorskip("mlflow")
-    monkeypatch.setenv("MLFLOW_TRACKING_URI", f"file://{tmp_path}")
+    monkeypatch.setenv("MLFLOW_TRACKING_URI", f"sqlite:///{(tmp_path / 'mlflow.db').as_posix()}")
 
     from src.tracking import start_run
 

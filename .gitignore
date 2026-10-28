@@ -9,6 +9,7 @@ venv/
 # MLflow local tracking
 mlruns/
 mlartifacts/
+mlflow.db
 
 # Data and models (tracked with DVC instead of Git)
 data/raw/

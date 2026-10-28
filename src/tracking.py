@@ -15,9 +15,9 @@ Usage:
 
 import os
 
-# Where MLflow stores runs. "./mlruns" is a local folder (ignored by Git).
+# Where MLflow stores runs. "sqlite:///mlflow.db" is a local folder (ignored by Git).
 # Later (V1.4 / V2.0) set MLFLOW_TRACKING_URI to a server and nothing else changes.
-DEFAULT_TRACKING_URI = "./mlruns"
+DEFAULT_TRACKING_URI = "sqlite:///mlflow.db"
 
 PROJECT_NAME = "ai-security"
 PROJECT_VERSION = "v1.0"
